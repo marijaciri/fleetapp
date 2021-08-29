@@ -31,7 +31,7 @@ public class Vehicle {
 	@Column(name="id")
 	private int id;
 
-	private String name;
+	
 	@ManyToOne
 	@JoinColumn(name="vehicletypeid", insertable=false, updatable=false)
 	private VehicleType vehicleType;
@@ -83,14 +83,6 @@ public class Vehicle {
 
 	public void setId(int id) {
 		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
 	}
 
 	public VehicleType getVehicleType() {
