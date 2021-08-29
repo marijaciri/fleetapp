@@ -215,13 +215,12 @@
                 <thead>
              
               <tr>    
-                    <th>Name</th>
+                    
                     <th>Description</th>
                     <th> Acquisition Date</th>
                     <th>Action</th>
                   </tr>
 				   <tr th:each="vehicle:${vehicles}">
-					<td th:text="${vehicle.name}">Name</td>
 					<td th:text="${vehicle.description}">Description</td>
 					<td th:text="${vehicle.acquisitionDate}">Acquisition Date</td>				
                     <td>
@@ -264,9 +263,6 @@
         </button>
       </div>
       <div class="modal-body">
-		<table width="100%">
-			<tr>
-				<td width="50%">
 				  <div class="form-group row">
 				    <label for="ddlVehicleTypeAdd" class="col-sm-4 col-form-label">Vehicle Type: </label>
 				    <div class="col-sm-6">
@@ -279,34 +275,29 @@
 					    </select>				    
 				    </div>
 				  </div>
-				 <div class="form-group row">
-				    <label for="txtVehicleNameAdd" class="col-sm-4 col-form-label">Vehicle Name: </label>
-				    <div class="col-sm-6">
-				      <input type="text" class="form-control" id="txtVehicleNameAdd" name="name" required>
-				    </div>
-				  </div>
+				
 				  <div class="form-group row">
 				    <label for="txtVehicleNumberAdd" class="col-sm-4 col-form-label">Vehicle Number: </label>
 				    <div class="col-sm-6">
-				      <input type="text" class="form-control" id="txtVehicleNumberAdd" name="vehicleNumber" required>
+				      <input type="text" class="form-control" id="txtVehicleNumberAdd" name="vehicleNumber" placeholder="Vehicle number">
 				    </div>
 				  </div>
 				  <div class="form-group row">
 				    <label for="txtRegistrationDateAdd" class="col-sm-4 col-form-label">Registration Date: </label>
 				    <div class="col-sm-6">
-				      <input type="date" class="form-control" id="txtRegistrationDateAdd" name="registrationDate" required>
+				      <input type="date" class="form-control" id="txtRegistrationDateAdd" name="registrationDate" placeholder="Registration date">
 				    </div>
 				  </div>
 				  <div class="form-group row">
 				    <label for="txtDescriptionAdd" class="col-sm-4 col-form-label">Description: </label>
 				    <div class="col-sm-6">
-				      <textarea type="text" class="form-control" id="txtDescriptionAdd" name="description"  required></textarea>
+				      <input type="text" class="form-control" id="txtDescriptionAdd" name="description" placeholder="Description" >
 				    </div>
 				  </div>
 				  <div class="form-group row">
 				    <label for="txtAcquisitionDateAdd" class="col-sm-4 col-form-label">Acquisition Date: </label>
 				    <div class="col-sm-6">
-				      <input type="date" class="form-control" id="txtAcquisitionDateAdd" name="acquisitionDate" required>				    
+				      <input type="date" class="form-control" id="txtAcquisitionDateAdd" name="acquisitionDate" placeholder="Acquisition date">				    
 				    </div>
 				  </div>
 				  <div class="form-group row">
@@ -345,8 +336,7 @@
 						</select>
 					</div>
 				  </div>
-				</td>
-				<td width="50%" style="padding-left:10px">
+				
 				  <div class="form-group row">
 
 				  </div>
@@ -371,7 +361,7 @@
 				  <div class="form-group row">
 				    <label for="txtRemarksAdd" class="col-sm-4 col-form-label">Remarks: </label>
 				    <div class="col-sm-6">
-				      <textarea type="text" class="form-control" id="txtRemarksAdd" name="remarks" placeholder="Remarks"rows="2"></textarea>			    
+				      <input type="text" class="form-control" id="txtRemarksAdd" name="remarks" placeholder="Remarks">			    
 				    </div>
 				  </div>
 				  <div class="form-group row">
@@ -398,16 +388,7 @@
 					    </select>				    
 				    </div>
 				  </div>
-				  <div>
-				  iv class="form-group row">
-				    <label for="flpImageAdd" class="col-sm-4 col-form-label">Select Image: </label>
-				    <div class="col-sm-6">
-				      <input type="file" class="form-control-file" id="fupImageAdd" name="photo" placeholder="Select File">
-				    </div>
-				  </div>
-				</td>
-			</tr>
-		</table>
+				
 		  <button type="submit" class="btn btn-primary">OK</button>
       </div>
       <div class="modal-footer">
@@ -436,7 +417,7 @@
 				<div class="form-group row">
 				    <label for="txtIdEdit" class="col-sm-4 col-form-label">Id: </label>
 				    <div class="col-sm-6">
-				      <input type="text" class="form-control" id="txtIdEdit" name="id" placeholder="Vehicle Id">
+				      <input type="text" class="form-control" id="txtIdEdit" name="id" placeholder="Vehicle Id" readonly>
 				    </div>
 				  </div>
 				  <div class="form-group row">
@@ -449,12 +430,6 @@
 						        th:text="${vehicleType.description}">
 						   </option>
 					    </select>				    
-				    </div>
-				  </div>
-				 <div class="form-group row">
-				    <label for="txtNameEdit" class="col-sm-4 col-form-label">Vehicle Name: </label>
-				    <div class="col-sm-6">
-				      <input type="text" class="form-control" id="txtNameEdit" name="name" placeholder="Vehicle name">
 				    </div>
 				  </div>
 				  <div class="form-group row">
@@ -570,12 +545,7 @@
 					    </select>				    
 				    </div>
 				  </div>
-				  <div class="form-group row">
-				    <label for="flpImageEdit" class="col-sm-4 col-form-label">Select Image: </label>
-				    <div class="col-sm-6">
-				      <input type="file" class="form-control-file" id="fupImageEdit" name="photo" placeholder="Select File">
-				    </div>
-				  </div>
+				  
 				</td>
 			</tr>
 		</table>
@@ -589,7 +559,6 @@
   </div>
  </form>
   </div> 
- 
  <div class="modal" tabindex="-1" role="dialog" id="deleteModal">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -610,24 +579,6 @@
   </div>
 </div>
 
- <div class="modal fade" tabindex="-1" role="dialog" id="photoModal">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Photo</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-      		<img id="vehiclePhoto" src="" width="90%" height="90%">
-    </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
  
   <!-- javascripts -->
   <script src="js/jquery.js"></script>
@@ -643,3 +594,4 @@
 </body>
 
 </html>
+
