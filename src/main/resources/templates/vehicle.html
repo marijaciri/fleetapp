@@ -226,7 +226,6 @@
                     <td>
                       <div class="btn-group">
                         <a class="btn btn-primary" id="editButton" th:href="@{/vehicles/findById/(id=${vehicle.id})}"><i class="icon_pencil-edit"></i></a>
-                        <a class="btn btn-success" id="detailsButton" th:href="@{/vehicles/findById/(id=${vehicle.id})}"><i class="icon_document_alt"></i></a>
                         <a class="btn btn-danger" id="deleteButton" th:href="@{/vehicles/delete/(id=${vehicle.id})}"><i class="icon_close_alt2"></i></a>
                       </div>
                    </td>
@@ -388,8 +387,6 @@
 					    </select>				    
 				    </div>
 				  </div>
-				
-		  <button type="submit" class="btn btn-primary">OK</button>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -549,7 +546,6 @@
 				</td>
 			</tr>
 		</table>
-		  <button type="submit" class="btn btn-primary">OK</button>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
