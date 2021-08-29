@@ -223,7 +223,7 @@
                   </tr>
 				 <tr th:each="vehicleHire:${vehicleHires}">
 					<td th:text="${vehicleHire.id}">Id</td>
-					<td th:text="${vehicleHire.vehicle.name}">Vehicle</td>
+					<td th:text="${vehicleHire.vehicle.description}">Vehicle</td>
 					<td th:text="${vehicleHire.dateOut}">Date Out</td>	
 					<td th:text="${vehicleHire.dateIn}">Date In</td>							
                     <td>
@@ -381,7 +381,7 @@
 					       <option>-SELECT-</option>			    
 					       <option th:each="vehicle : ${vehicles}"
 						        th:value="${vehicle.id}"
-						        th:text="${vehicle.name}">
+						        th:text="${vehicle.description}">
 						   </option>
 					    </select>		
 					    </div>		    
@@ -488,7 +488,7 @@
 					       <option>-SELECT-</option>			    
 					       <option th:each="vehicle : ${vehicles}"
 						        th:value="${vehicle.id}"
-						        th:text="${vehicle.name}">
+						        th:text="${vehicle.description}">
 						   </option>
 					    </select>		
 					    </div>		    
