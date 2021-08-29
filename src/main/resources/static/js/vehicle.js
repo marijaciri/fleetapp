@@ -11,7 +11,6 @@ $('document').ready(function() {
 			$('#txtFuelCapacityEdit').val(vehicle.fuelCapacity);
 			$('#txtIdEdit').val(vehicle.id);
 			$('#ddlLocationEdit').val(vehicle.locationid);
-			$('#txtNameEdit').val(vehicle.name);
 			$('#txtNetWeightEdit').val(vehicle.netWeight);
 			$('#txtPowerEdit').val(vehicle.power);
 			var regDate = vehicle.registrationDate.substr(0,10);
@@ -26,9 +25,6 @@ $('document').ready(function() {
 		$('#editModal').modal();		
 	});
 	
-		
-	
-	
 	$('.table #deleteButton').on('click',function(event) {
 		event.preventDefault();
 		var href = $(this).attr('href');
@@ -36,10 +32,5 @@ $('document').ready(function() {
 		$('#deleteModal').modal();		
 	});	
 	
-	$('.table #photoButton').on('click',function(event) {
-		event.preventDefault();
-		var href = $(this).attr('href');
-		$('#photoModal #vehiclePhoto').attr('src', href);
-		$('#photoModal').modal();		
-	});	
+	
 });
