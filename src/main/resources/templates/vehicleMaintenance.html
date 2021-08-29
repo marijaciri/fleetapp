@@ -206,7 +206,7 @@
           </div>
         </div>
         <!-- page start-->
-       <h1>Vehicele Maintenance</h1>
+       <h1>Vehicle Maintenance</h1>
        <div class="row">
           <div class="col-lg-12">
 		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">Add New</button>
@@ -225,15 +225,15 @@
                 <tbody>
 				  <tr th:each="vehicleMaintenance:${vehicleMaintenances}">
 				  <td th:text="${vehicleMaintenance.supplier.name}">Supplier</td>
-				  <td th:text="${vehicleMaintenance.vehicle.name}">Vehicle</td>
+				  <td th:text="${vehicleMaintenance.vehicle.description}">Vehicle</td>
 					<td th:text="${vehicleMaintenance.startDate}">Start Date</td>
 					<td th:text="${vehicleMaintenance.endDate}">End Date</td>	
 					<td th:text="${vehicleMaintenance.remarks}">Remarks</td>				
                     <td>
                       <div class="btn-group">
-                        <a class="btn btn-primary" id="editButton" th:href="@{/vehicleMaintenances/findById/(id=${invoice.id})}"><i class="icon_pencil-edit"></i></a>
-                        <a class="btn btn-success" id="detailsButton" th:href="@{/vehicleMaintenances/findById/(id=${invoice.id})}"><i class="icon_document_alt"></i></a>
-                        <a class="btn btn-danger"  id="deleteButton" th:href="@{/vehicleMaintenances/delete/(id=${invoice.id})}"><i class="icon_close_alt2"></i></a>
+                        <a class="btn btn-primary" id="editButton" th:href="@{/vehicleMaintenances/findById/(id=${vehicleMaintenance.id})}"><i class="icon_pencil-edit"></i></a>
+                        <a class="btn btn-success" id="detailsButton" th:href="@{/vehicleMaintenances/findById/(id=${vehicleMaintenance.id})}"><i class="icon_document_alt"></i></a>
+                        <a class="btn btn-danger"  id="deleteButton" th:href="@{/vehicleMaintenances/delete/(id=${vehicleMaintenance.id})}"><i class="icon_close_alt2"></i></a>
                      </div>
                    </td>
                   </tr>
@@ -286,7 +286,7 @@
 			       <option>-SELECT-</option>			    
 			       <option th:each="vehicle : ${vehicles}"
 				        th:value="${vehicle.id}"
-				        th:text="${vehicle.name}">
+				        th:text="${vehicle.description}">
 				   </option>
 			    </select>				    
 		  </div>
@@ -339,7 +339,7 @@
          
          <div class="form-group">
 		    <label for="ddlSupplierEdit" class="col-form-label">Supplier: </label>
-			    <select class="form-control" id="ddlSupplierEdit" name="supplierid" readonly>
+			    <select class="form-control" id="ddlSupplierEdit" name="supplierid" >
 			       <option>-SELECT-</option>			    
 			       <option th:each="supplier : ${suppliers}"
 				        th:value="${supplier.id}"
@@ -350,11 +350,11 @@
 
          <div class="form-group">
 		    <label for="ddlVehicleEdit" class="col-form-label">Vehicle: </label>
-			    <select class="form-control" id="ddlVehicleAEdit" name="vehicleid" readonly>
+			    <select class="form-control" id="ddlVehicleAEdit" name="vehicleid" >
 			       <option>-SELECT-</option>			    
 			       <option th:each="vehicle : ${vehicles}"
 				        th:value="${vehicle.id}"
-				        th:text="${vehicle.name}">
+				        th:text="${vehicle.description}">
 				   </option>
 			    </select>				    
 		  </div>
@@ -411,11 +411,11 @@
 
          <div class="form-group">
 		    <label for="ddlVehicleDetails" class="col-form-label">Vehicle: </label>
-			    <select class="form-control" id="ddlVehicleADetails" name="vehicleid" readonly>
+			    <select class="form-control" id="ddlVehicleADetails" name="vehicleid" >
 			       <option>-SELECT-</option>			    
 			       <option th:each="vehicle : ${vehicles}"
 				        th:value="${vehicle.id}"
-				        th:text="${vehicle.name}">
+				        th:text="${vehicle.description}">
 				   </option>
 			    </select>				    
 		  </div>
@@ -491,4 +491,5 @@
 </body>
 
 </html>
+
 
