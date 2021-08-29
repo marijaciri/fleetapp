@@ -24,7 +24,7 @@ $('document').ready(function() {
 			$('#ddlEmployeeTypeEdit').val(employee.employeetypeid);				
 			var hireDate = employee.hireDate.substr(0,10);
 			$('#hireDatedEdit').val(hireDate);
-			$('ddlJobTitleEdit').val(employee.jobtitleid);	
+			$('#ddlJobTitleEdit').val(employee.jobtitleid);	
 			
 		});			
 		$('#editModal').modal();		
@@ -53,7 +53,7 @@ $('document').ready(function() {
 			$('#ddlEmployeeTypeDetails').val(employee.employeetypeid);				
 			var hireDate = employee.hireDate.substr(0,10);
 			$('#hireDatedDetails').val(hireDate);
-			$('ddlJobTitleDetails').val(employee.jobtitleid);
+			$('#ddlJobTitleDetails').val(employee.jobtitleid);
 		});			
 		$('#detailsModal').modal();
 		
